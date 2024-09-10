@@ -1,17 +1,45 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const loginBtn = document.getElementById('loginBtn');
+    const signupBtn = document.getElementById('signupBtn');
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    loginBtn.addEventListener('click', function() {
+        loginBtn.classList.add('active');
+        signupBtn.classList.remove('active');
+        loginForm.classList.add('active');
+        signupForm.classList.remove('active');
+    });
 
-    const messageElement = document.getElementById('message');
+    signupBtn.addEventListener('click', function() {
+        signupBtn.classList.add('active');
+        loginBtn.classList.remove('active');
+        signupForm.classList.add('active');
+        loginForm.classList.remove('active');
+    });
 
-    // Simple client-side validation (in real scenarios, you need server-side validation)
-    if (username === 'admin' && password === 'password') {
-        messageElement.textContent = 'Login successful!';
-        messageElement.style.color = 'green';
-    } else {
-        messageElement.textContent = 'Invalid credentials';
-        messageElement.style.color = 'red';
-    }
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Basic client-side validation (just for example)
+        const username = document.getElementById('loginUsername').value;
+        const password = document.getElementById('loginPassword').value;
+        if (username && password) {
+            alert('Login successful!');
+        } else {
+            alert('Please fill in all fields.');
+        }
+    });
+
+    signupForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Basic client-side validation (just for example)
+        const username = document.getElementById('signupUsername').value;
+        const email = document.getElementById('signupEmail').value;
+        const password = document.getElementById('signupPassword').value;
+        if (username && email && password) {
+            alert('Sign up successful!');
+        } else {
+            alert('Please fill in all fields.');
+        }
+    });
 });
