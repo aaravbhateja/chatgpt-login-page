@@ -3,26 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login and Signup Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+        <div class="form-container">
+            <div class="form-toggle">
+                <button id="loginBtn" class="active">Login</button>
+                <button id="signupBtn">Sign Up</button>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+            <div class="form-content">
+                <form id="loginForm" class="form active">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <label for="loginUsername">Username</label>
+                        <input type="text" id="loginUsername" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+                <form id="signupForm" class="form">
+                    <h2>Sign Up</h2>
+                    <div class="form-group">
+                        <label for="signupUsername">Username</label>
+                        <input type="text" id="signupUsername" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Sign Up">
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Login">
-            </div>
-        </form>
-        <div id="message"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
