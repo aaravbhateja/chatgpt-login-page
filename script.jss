@@ -20,11 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        // Basic client-side validation (just for example)
+        // Basic client-side validation
         const username = document.getElementById('loginUsername').value;
         const password = document.getElementById('loginPassword').value;
         if (username && password) {
-            alert('Login successful!');
+            // Redirect to YouTube
+            window.location.href = 'https://www.instagram.com/who.aar4v/';
         } else {
             alert('Please fill in all fields.');
         }
@@ -32,12 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     signupForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        // Basic client-side validation (just for example)
+        // Basic client-side validation
         const username = document.getElementById('signupUsername').value;
         const email = document.getElementById('signupEmail').value;
         const password = document.getElementById('signupPassword').value;
         if (username && email && password) {
-            alert('Sign up successful!');
+            // Redirect to YouTube
+            window.location.href = 'https://www.youtube.com';
         } else {
             alert('Please fill in all fields.');
         }
