@@ -1,19 +1,58 @@
+/* Apply a background image */
 body {
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+}
+
+/* Center the container on the page */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    width: 100vw;
 }
 
-.container {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Style the form container */
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
     padding: 20px;
-    width: 300px;
+}
+
+/* Style the form toggle buttons */
+.form-toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 48%;
+}
+
+.form-toggle button.active {
+    background: #0056b3;
+}
+
+/* Style the forms */
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
 }
 
 h2 {
@@ -35,7 +74,7 @@ h2 {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 
